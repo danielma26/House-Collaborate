@@ -6,7 +6,7 @@
  *
  * This class was written as an early example for teaching Java with BlueJ.
  * 
- * @author  Michael Kšlling and David J. Barnes
+ * @author  Michael KÅ¡lling and David J. Barnes
  * @version 2011.07.31
  */
 public class Picture
@@ -33,7 +33,19 @@ public class Picture
     private Circle moon;
     private Triangle arm;
     private Triangle arm1;
-    private boolean drawn;
+    private boolean drawn; 
+    private Square window_1;
+    private Square window_2;
+    private Square window_3;
+    private Square window_4;
+    private Square window_5;
+    private Square window_6;
+    private Square window_7;
+    private Square window_8;
+    private Square window_9;
+    private Square window_10;
+	 private Triangle roof_1;
+	 private Person person;
 
     /**
      * Constructor for objects of class Picture
@@ -59,6 +71,24 @@ public class Picture
         slender = new Person();
         arm = new Triangle();
         arm1 = new Triangle();
+	 window_1 = new Square();
+        window_2 = new Square();
+        window_3 = new Square();
+        window_4 = new Square();
+        window_5 = new Square();
+        window_6 = new Square();
+        window_7 = new Square();
+        window_8 = new Square();
+        window_9 = new Square();
+        window_10 = new Square ();
+        roof_1 = new Triangle();
+        roof = new Triangle();  
+        sun = new Circle();
+        person = new Person();
+        drawn = false;
+
+	    
+	    
     }
 
     /**
@@ -330,6 +360,113 @@ public class Picture
             drawn = true;
         }
     }
+	
+	  public void draw_ma()
+    {
+        if(!drawn) {
+            wall.changeColor("green");
+            wall.moveHorizontal(-180);
+            wall.moveVertical(-60);
+            wall.changeSize(300);
+            wall.makeVisible();
+            
+            
+            //1st floor
+            window_1.changeColor("blue");
+            window_1.moveHorizontal(-150);
+            window_1.moveVertical(70);
+            window_1.changeSize(50);
+            window_1.makeVisible();
+            
+            window_2.changeColor("blue");
+            window_2.moveHorizontal(-50);
+            window_2.moveVertical(70);
+            window_2.changeSize(50);
+            window_2.makeVisible();
+            
+            
+            window_3.changeColor("blue");
+            window_3.moveHorizontal(50);
+            window_3.moveVertical(70);
+            window_3.changeSize(50);
+            window_3.makeVisible();
+            
+            //2nd floor
+            window_4.changeColor("blue");
+            window_4.moveHorizontal(-150);
+            window_4.moveVertical(10);
+            window_4.changeSize(50);
+            window_4.makeVisible();
+            
+            window_5.changeColor("blue");
+            window_5.moveHorizontal(-50);
+            window_5.moveVertical(10);
+            window_5.changeSize(50);
+            window_5.makeVisible();
+            
+            window_6.changeColor("blue");
+            window_6.moveHorizontal(50);
+            window_6.moveVertical(10);
+            window_6.changeSize(50);
+            window_6.makeVisible();  
+            //3rd floor
+            window_7.changeColor("blue");
+            window_7.moveHorizontal(-150);
+            window_7.moveVertical(-50);
+            window_7.changeSize(50);
+            window_7.makeVisible(); 
+            
+            window_8.changeColor("blue");
+            window_8.moveHorizontal(-50);
+            window_8.moveVertical(-50);
+            window_8.changeSize(50);
+            window_8.makeVisible(); 
+            
+            window_9.changeColor("blue");
+            window_9.moveHorizontal(50);
+            window_9.moveVertical(-50);
+            window_9.changeSize(50);
+            window_9.makeVisible(); 
+            
+            //entrance
+            window_10.changeColor("blue");
+            window_10.moveHorizontal(-50);
+            window_10.moveVertical(140);
+            window_10.changeSize(40);
+            window_10.makeVisible();            
+            
+	    //small roof
+            roof.changeColor("red");
+            roof.changeSize(10, 40);
+            roof.moveHorizontal(70);
+            roof.moveVertical(110);
+            roof.makeVisible();
+
+            //big roof
+            roof_1.changeColor("magenta");
+            roof_1.changeSize(20, 300);
+            roof_1.moveHorizontal(70);
+            roof_1.moveVertical(-100);
+            roof_1.makeVisible();
+            
+            
+            sun.changeColor("yellow");
+            sun.moveHorizontal(100);
+            sun.moveVertical(-100);
+            sun.changeSize(80);
+            sun.makeVisible();
+            
+            person.changeColor("black");
+            person.moveHorizontal(-130);
+            person.moveVertical(70);
+            person.makeVisible();
+            
+            
+            drawn = true;
+        }
+    }
+
+	
     /**
      * Change this picture to black/white display
      */
