@@ -55,6 +55,51 @@ public class Picture
         sun.changeSize(80);
         sun.makeVisible();
     }
+    
+    public void draw_Legocki()
+    {
+        Circle outerBow;
+        Circle innerBow;
+        Person dude;
+        Circle ring1;
+        Circle ring2;
+        Circle ring3;
+        Circle ring4;
+        Triangle outerFeet;
+        Triangle innerFeet;
+        Square tip;
+        Square shaft1;
+        Square shaft2;
+        Square shaft3;
+        
+        outerBow = new Circle(40,260,180,"red");
+        innerBow = new Circle(40,265,178,"white");
+        dude = new Person();
+        ring1 = new Circle(60,110,150,"magenta");
+        ring2 = new Circle(50,115,155,"yellow");
+        ring3 = new Circle(30,125,165,"green");
+        ring4 = new Circle(10,135,175,"red");
+        outerFeet = new Triangle(40,50,140,185,"black");
+        innerFeet = new Triangle(60,70,140,200,"white");
+        tip = new Square(10,200,180,"black");
+        shaft1 = new Square(10,210,180,"red");
+        shaft2 = new Square(10,220,180,"red");
+        shaft3 = new Square(10,230,180,"red");
+        
+        outerBow.makeVisible();
+        innerBow.makeVisible();
+        dude.makeVisible();
+        outerFeet.makeVisible();
+        innerFeet.makeVisible();
+        ring1.makeVisible();
+        ring2.makeVisible();
+        ring3.makeVisible();
+        ring4.makeVisible();
+        tip.makeVisible();
+        shaft1.makeVisible();
+        shaft2.makeVisible();
+        shaft3.makeVisible();
+    }
 
 
     private Square square1;
